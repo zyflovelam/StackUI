@@ -39,6 +39,8 @@ open class Publisher<Value> {
     
     open func didUpdate(_ value: Value) {
         lastValue = value
-        subscribers.forEach { $0(value) }
+        DispatchQueue.main.async {            
+            self.subscribers.forEach { $0(value) }
+        }
     }
 }
