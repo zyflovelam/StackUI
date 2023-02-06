@@ -26,17 +26,18 @@ public struct Live<Value> {
 }
 
 open class Publisher<Value> {
-    typealias SubscriberClosure = (Value)->()
-    var lastValue: Value?
-    var subscribers = [SubscriberClosure]()
+    public typealias SubscriberClosure = (Value)->()
+    open var lastValue: Value?
+    open var subscribers = [SubscriberClosure]()
     
-    func addSubscriber(_ subscriber: @escaping SubscriberClosure) {
+    open func addSubscriber(_ subscriber: @escaping SubscriberClosure) {
         if lastValue != nil {
             subscriber(lastValue!)
         }
         subscribers.append(subscriber)
     }
-    func didUpdate(_ value: Value) {
+    
+    open func didUpdate(_ value: Value) {
         lastValue = value
         subscribers.forEach { $0(value) }
     }
