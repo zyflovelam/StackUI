@@ -25,7 +25,7 @@ public struct Live<Value> {
     }
 }
 
-public class Publisher<Value> {
+open class Publisher<Value> {
     typealias SubscriberClosure = (Value)->()
     var lastValue: Value?
     var subscribers = [SubscriberClosure]()
