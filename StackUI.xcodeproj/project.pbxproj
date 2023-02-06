@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6DA91A28D5AC9500EB086B /* ViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DA91928D5AC9500EB086B /* ViewBox.swift */; };
 		EA741EC626EC9B5A0021E089 /* StackUI.h in Headers */ = {isa = PBXBuildFile; fileRef = EA741EC426EC9B5A0021E089 /* StackUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAB9DDF9271804E1009DAE51 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB9DDE3271804E1009DAE51 /* Label.swift */; };
 		EAB9DDFA271804E1009DAE51 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB9DDE4271804E1009DAE51 /* View.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E6DA91928D5AC9500EB086B /* ViewBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBox.swift; sourceTree = "<group>"; };
 		EA741EC126EC9B5A0021E089 /* StackUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StackUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA741EC426EC9B5A0021E089 /* StackUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackUI.h; sourceTree = "<group>"; };
 		EA741EC526EC9B5A0021E089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EAB9DDE3271804E1009DAE51 /* Label.swift */,
 				EAB9DDE4271804E1009DAE51 /* View.swift */,
 				EAB9DDE5271804E1009DAE51 /* PropertyWrapper.swift */,
+				0E6DA91928D5AC9500EB086B /* ViewBox.swift */,
 				EAB9DDE6271804E1009DAE51 /* Control.swift */,
 				EAB9DDE7271804E1009DAE51 /* CollectionView.swift */,
 				EAB9DDE8271804E1009DAE51 /* StackView.swift */,
@@ -222,6 +225,7 @@
 				EAB9DDFD271804E1009DAE51 /* CollectionView.swift in Sources */,
 				EAB9DE09271804E1009DAE51 /* ImageView.swift in Sources */,
 				EAB9DE05271804E1009DAE51 /* TextView.swift in Sources */,
+				0E6DA91A28D5AC9500EB086B /* ViewBox.swift in Sources */,
 				EAB9DE0B271804E1009DAE51 /* Button.swift in Sources */,
 				EAB9DE04271804E1009DAE51 /* TextField.swift in Sources */,
 				EAB9DE0C271804E1009DAE51 /* Layer.swift in Sources */,
