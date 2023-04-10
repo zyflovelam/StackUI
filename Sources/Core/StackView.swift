@@ -118,7 +118,7 @@ open class HScrollStack: UIView, StackUIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func applyScrollView(_ config: (UIScrollView)->() ) -> Self {
+    open func applyScrollView(_ config: (UIScrollView)->() ) -> Self {
         config(scrollView)
         return self
     }
@@ -170,7 +170,7 @@ open class VScrollStack: UIView, StackUIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func applyScrollView(_ config: (UIScrollView)->() ) -> Self {
+    open func applyScrollView(_ config: (UIScrollView)->() ) -> Self {
         config(scrollView)
         return self
     }

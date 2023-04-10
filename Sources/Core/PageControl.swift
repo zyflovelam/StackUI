@@ -81,7 +81,7 @@ public extension StackUIPageControl {
 }
 
 open class PageControl: UIPageControl, StackUIPageControl {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

@@ -186,7 +186,7 @@ public extension StackUITextView {
 
 /// The width and height of `TextView` is required
 open class TextView: UITextView, StackUITextView {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

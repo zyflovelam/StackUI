@@ -29,7 +29,7 @@ public extension StackUIActivityIndicatorView {
 }
 
 open class ActivityIndicatorView: UIActivityIndicatorView, StackUIActivityIndicatorView {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

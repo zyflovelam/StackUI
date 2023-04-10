@@ -80,7 +80,7 @@ public extension StackUIImageView {
 }
 
 open class ImageView: UIImageView, StackUIImageView {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

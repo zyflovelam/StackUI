@@ -169,7 +169,7 @@ public extension StackUIScrollView {
 }
 
 open class ScrollView: UIScrollView, StackUIScrollView {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

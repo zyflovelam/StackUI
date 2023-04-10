@@ -81,7 +81,7 @@ public extension StackUISlider {
 }
 
 open class Slider: UISlider, StackUISlider {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

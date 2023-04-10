@@ -206,7 +206,7 @@ public extension StackUIView {
 }
 
 open class View: UIView, StackUIView {
-    public func apply(_ closure: (Self) -> Void) -> Self {
+    open func apply(_ closure: (Self) -> Void) -> Self {
         closure(self)
         return self
     }

@@ -166,7 +166,7 @@ open class Label: UILabel, StackUILabel {
         super.init(coder: coder)
     }
     
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

@@ -60,7 +60,7 @@ public extension StackUISwitch {
 }
 
 open class SwitchUI: UISwitch, StackUISwitch {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

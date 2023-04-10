@@ -243,7 +243,7 @@ public extension StackUITableView {
 }
 
 open class TableView: UITableView, StackUITableView {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

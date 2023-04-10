@@ -159,7 +159,7 @@ public extension StackUIButton {
 }
 
 open class Button: UIButton, StackUIButton {
-    public func apply(_ closure: (Self) -> ()) -> Self {
+    open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
     }

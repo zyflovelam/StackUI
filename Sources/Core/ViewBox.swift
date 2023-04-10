@@ -66,4 +66,9 @@ class ViewBox: UIView, StackUIView {
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+
+    open func apply(_ closure: (Self) -> Void) -> Self {
+        closure(self)
+        return self
+    }
 }
