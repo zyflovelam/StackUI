@@ -243,6 +243,12 @@ public extension StackUITextField {
         self.keyboardType = keyboardType
         return self
     }
+    func keyboardType(_ publisher: Publisher<UIKeyboardType>) -> Self {
+        publisher.addSubscriber { [weak self] keyboardType in
+            self?.keyboardType = keyboardType
+        }
+        return self
+    }
     func keyboardAppearance(_ keyboardAppearance: UIKeyboardAppearance) -> Self {
         self.keyboardAppearance = keyboardAppearance
         return self
