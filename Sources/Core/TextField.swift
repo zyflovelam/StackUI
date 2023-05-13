@@ -265,6 +265,15 @@ public extension StackUITextField {
         self.isSecureTextEntry = isSecureTextEntry
         return self
     }
+    
+    func isSecureTextEntry(_ publisher: Publisher<Bool>) -> Self {
+        publisher.addSubscriber { [weak self] isSecureTextEntry in
+            guard let self = self else { return }
+            self.isSecureTextEntry = isSecureTextEntry
+        }
+        return self
+    }
+    
     @available(iOS 10.0, *)
     func textContentType(_ textContentType: UITextContentType!) -> Self {
         self.textContentType = textContentType
