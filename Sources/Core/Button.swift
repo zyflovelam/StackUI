@@ -165,12 +165,12 @@ open class Button: UIButton, StackUIButton {
         return self
     }
     
-    @discardableResult func touchAreaPadding(_ touchAreaPadding: CGFloat) -> Self {
+    @discardableResult public func touchAreaPadding(_ touchAreaPadding: CGFloat) -> Self {
         self.touchAreaPadding = touchAreaPadding
         return self
     }
 
-    @discardableResult func touchAreaPadding(_ publisher: Publisher<CGFloat>) -> Self {
+    @discardableResult public func touchAreaPadding(_ publisher: Publisher<CGFloat>) -> Self {
         publisher.addSubscriber { [weak self] touchAreaPadding in
             self?.touchAreaPadding(touchAreaPadding)
         }
