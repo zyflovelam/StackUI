@@ -159,8 +159,28 @@ public extension StackUIButton {
 }
 
 open class Button: UIButton, StackUIButton {
+    var touchAreaPadding: CGFloat = 0
     open func apply(_ closure: (Self) -> ()) -> Self {
         closure(self)
         return self
+    }
+    
+    @discardableResult func touchAreaPadding(_ touchAreaPadding: CGFloat) -> Self {
+        self.touchAreaPadding = touchAreaPadding
+        return self
+    }
+
+    @discardableResult func touchAreaPadding(_ publisher: Publisher<CGFloat>) -> Self {
+        publisher.addSubscriber { [weak self] touchAreaPadding in
+            self?.touchAreaPadding(touchAreaPadding)
+        }
+        return self
+    }
+}
+
+extension Button {
+    override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        let extendedBounds = bounds.insetBy(dx: -touchAreaPadding, dy: -touchAreaPadding)
+        return extendedBounds.contains(point)
     }
 }
