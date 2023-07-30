@@ -32,6 +32,9 @@ public protocol StackUIView: StackUILayer {
     func isOpaque(_ isOpaque: Bool) -> Self
     func clearsContextBeforeDrawing(_ clearsContextBeforeDrawing: Bool) -> Self
     func isHidden(_ isHidden: Bool) -> Self
+    func isHidden(_ publisher: Publisher<Bool>) -> Self
+    func isShow(_ isShow: Bool) -> Self
+    func isShow(_ publisher: Publisher<Bool>) -> Self
     func contentMode(_ contentMode: UIView.ContentMode) -> Self
     func mask(_ mask: UIView?) -> Self
     func tintColor(_ tintColor: UIColor!) -> Self
@@ -60,7 +63,7 @@ public extension StackUIView {
         widthAnchor.constraint(equalToConstant: width).isActive = true
         return self
     }
-    
+
     func height(_ height: CGFloat) -> Self {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
@@ -201,6 +204,18 @@ public extension StackUIView {
 
     func contentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> Self {
         setContentCompressionResistancePriority(priority, for: axis)
+        return self
+    }
+
+    func isShow(_ isShow: Bool) -> Self {
+        isHidden = !isShow
+        return self
+    }
+
+    func isShow(_ publisher: Publisher<Bool>) -> Self {
+        publisher.addSubscriber { [weak self] isShow in
+            _ = self?.isShow(isShow)
+        }
         return self
     }
 }
